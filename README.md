@@ -2,6 +2,7 @@
 
 - Contexte : d'où viennent les données, qui les a créées et dans quel contexte
 Nous avons sélectionné nos données sur Kaggle qui répertorie les données essentielles sur les différentes planètes du système solaire en excluant Pluton qui depuis certaines années a été exclu du système. Ces données ont été récoltées et structurées par Sourav Banerjee avec des sources de la Nasa.
+https://www.kaggle.com/datasets/iamsouravbanerjee/planet-dataset 
 
 - Description Comment sont structurées les données ? Parler du format, des attributs et du type de données
 Ces données sont structurées par planètes et leurs différentes caractéristiques. Elles sont téléchargeables sous un format csv. On retrouve 22 colonnes, 13 sous-formes décimales, 4 en Integer, 3 en String, 2 en autre type. On a le nom de la planète, la couleur, la masse, le diamètre, la densité, la surface de gravité, période de rotation ou encore la distance du soleil.
