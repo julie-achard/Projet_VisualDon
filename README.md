@@ -27,8 +27,8 @@ Julie Achard
 
 **Affichage fiche planète version 1**
 
-1. Si l’on clique sur une planète, un zoom s’effectue sur celle-ci
-2. Pendant ce zoom, un court texte s’afficher sur la planète et à la fin de ce texte il y a un bouton sur lequel on peut appuyer
+1. Si l’on clique sur une planète, un zoom s’effectue sur celle-ci.
+2. Pendant ce zoom, un court texte s’afficher sur la planète et à la fin de ce texte, il y a un bouton sur lequel on peut appuyer
 3. Lorsque l’on clique sur ce bouton, la fiche descriptive apparaît sur la droite
 4. Bouton retour en haut à gauche pour retourner sur la page initiale
 
