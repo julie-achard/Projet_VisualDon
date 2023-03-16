@@ -1,6 +1,6 @@
 # Projet_VisualDon
 
-Thématique
+**Thématique**
 
 - Contexte : d'où viennent les données, qui les a créées et dans quel contexte
 Nous avons sélectionné nos données sur Kaggle qui répertorie les données essentielles sur les différentes planètes du système solaire en excluant Pluton qui depuis certaines années a été exclu du système. Ces données ont été récoltées et structurées par Sourav Banerjee avec des sources de la Nasa.
@@ -19,9 +19,9 @@ Ces trois projets sont des analyses plus approfondies et des visualisations avec
 Lucie Demont 
 Julie Achard
 
-Wireframe
+**Wireframe**
 
-Intéractivités 
+***Intéractivités***
 
 - Planètes en mouvement avec leur vitesse respective
 
