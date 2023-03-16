@@ -28,14 +28,14 @@ Julie Achard
 **Affichage fiche planète version 1**
 
 1. Si l’on clique sur une planète, un zoom s’effectue sur celle-ci.
-2. Pendant ce zoom, un court texte s’afficher sur la planète et à la fin de ce texte, il y a un bouton sur lequel on peut appuyer
-3. Lorsque l’on clique sur ce bouton, la fiche descriptive apparaît sur la droite
-4. Bouton retour en haut à gauche pour retourner sur la page initiale
+2. Pendant ce zoom, un court texte s’affiche avec un bouton "voir plus".
+3. Ce bouton affiche la fiche descriptive qui apparaît sur la droite
+4. Bouton retour en haut à gauche pour retourner sur la page initiale.
 
 **Affichage fiche planète version 2**
 
-1. Avec le menu en bas de notre système solaire, quand on clique sur le nom de la planète, le même zoom que la version s’effectue
-2. Pendant ce zoom, un court texte s’afficher sur la planète et à la fin de ce texte il y a un bouton sur lequel on peut appuyer
+1. Avec le menu en bas de notre système solaire, quand on clique sur le nom de la planète on a le même zoom que la version 1.
+2. Pendant ce zoom, un court texte s’affiche avec un bouton "voir plus".
 3. Lorsque l’on clique sur ce bouton, la fiche descriptive apparaît sur la droite
 4. Bouton retour en haut à gauche pour retourner sur la page initiale
 
