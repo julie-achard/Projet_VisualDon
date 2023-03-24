@@ -1,13 +1,13 @@
-import { csv } from "/d3-fetch";
-import { select } from "/d3-selection";
-import { mean } from "/d3-array";
+import { csv } from "d3-fetch";
+import { select } from "d3-selection";
+import { mean } from "d3-array";
 
 select("body").append("div").attr("id", "monSvg");
 select("#monSvg").append("svg").attr("width", "500").attr("height", "500");
 
 const dessin = select("svg");
 
-csv("data/planet.csv")
+csv("../data/planets.csv")
   .then(function (data) {
     data.map(
       (d) => (
