@@ -1,13 +1,13 @@
-import { csv } from "d3-fetch";
-import { select } from "d3-selection";
-import { mean } from "d3-array";
+import { csv } from "/d3-fetch";
+import { select } from "/d3-selection";
+import { mean } from "/d3-array";
 
 select("body").append("div").attr("id", "monSvg");
 select("#monSvg").append("svg").attr("width", "500").attr("height", "500");
 
 const dessin = select("svg");
 
-csv("/data/planet.csv")
+csv("data/planet.csv")
   .then(function (data) {
     data.map(
       (d) => (
@@ -35,18 +35,18 @@ csv("/data/planet.csv")
 
     const planet = cleanData.map((d) => d.Planet);
 
-    console.log(mean(planet));
+    console.log(planet);
 
-    dessin
-      .selectAll("rect")
-      .data(cleanData)
-      .join((enter) =>
-        enter
-          .append("g")
-          .append("rect")
-          .attr("width", "20")
-          .attr("height", (d) => d.Planet)
-          .attr("x", (d, i) => i * 30)
-          .attr("y", (d) => 500 - d * 10)
-      );
+    //   dessin
+    //     .selectAll("rect")
+    //     .data(cleanData)
+    //     .join((enter) =>
+    //       enter
+    //         .append("g")
+    //         .append("rect")
+    //         .attr("width", "20")
+    //         .attr("height", (d) => d.Planet)
+    //         .attr("x", (d, i) => i * 30)
+    //         .attr("y", (d) => 500 - d * 10)
+    //     );
   });
