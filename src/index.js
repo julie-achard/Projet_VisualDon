@@ -51,6 +51,13 @@ d3.csv("../data/planets.csv").then((data) => {
           "Le Soleil est l'étoile centrale de notre système solaire,\nune gigantesque boule de gaz chaud qui génère de l'énergie grâce à des réactions nucléaires. Il est essentiel à la vie sur Terre, fournissant la lumière et la chaleur qui permettent à la vie de se développer."
         );
 
+      const planets = data.map((planet) => ({
+        name: planet.Planet,
+        distance: planet.Distance_from_sun * (10 ^ 6),
+        size: +planet.Diameter / 10000,
+        color: planet.Color,
+      }));
+      //Pour la fiche descriptive
       var sunBBox = this.getBoundingClientRect();
       var tooltipWidth = tooltip.node().offsetWidth;
       var tooltipHeight = tooltip.node().offsetHeight;
@@ -111,4 +118,13 @@ d3.csv("../data/planets.csv").then((data) => {
   //       .attr("cy", height / 2 - planet.distance)
   //       .attr("r", planet.size / 2)
   //       .attr("fill", planet.color).call;
+});
+
+d3.csv("../data/planets.csv").then((data) => {
+  const mercury = svg
+    .append("circle")
+    .attr("cx", width / 4)
+    .attr("cy", height / 4)
+    .attr("r", 50)
+    .attr("fill", "white");
 });
