@@ -20,7 +20,7 @@ d3.csv("../data/planets.csv").then(function (data) {
       (d.color = +d.color),
       (d.Mass = +d.Mass),
       (d.Density = +d.Density),
-      (d.Diameter = +d.Diameter),
+      (d.Diameter = d.Diameter),
       (d.Surface_gravity = +d.Surface_gravity),
       (d.Distance_from_sun = +d.Distance_from_sun)
     )
@@ -45,25 +45,14 @@ d3.csv("../data/planets.csv").then((data) => {
     .attr("fill", "yellow")
     //Quand on clique sur le soleil un rectangle apparaît
     .on("click", function (d) {
-      tooltip
-        .style("visibility", "visible")
-        .html(
-          "Le Soleil est l'étoile centrale de notre système solaire,\nune gigantesque boule de gaz chaud qui génère de l'énergie grâce à des réactions nucléaires. Il est essentiel à la vie sur Terre, fournissant la lumière et la chaleur qui permettent à la vie de se développer."
-        );
+      tooltip.style("visibility", "visible");
 
       const planets = data.map((planet) => ({
         name: planet.Planet,
-        distance: planet.Distance_from_sun * (10 ^ 6),
+        distance: +planet.Distance_from_sun * (10 ^ 6),
         size: +planet.Diameter / 10000,
         color: planet.Color,
       }));
-      //Pour la fiche descriptive
-      var sunBBox = this.getBoundingClientRect();
-      var tooltipWidth = tooltip.node().offsetWidth;
-      var tooltipHeight = tooltip.node().offsetHeight;
-      var tooltipX = sunBBox.x + sunBBox.width / 2 - tooltipWidth / 2;
-      var tooltipY = sunBBox.y - tooltipHeight - 10;
-      tooltip.style("left", tooltipX + "px").style("top", tooltipY + "px");
     });
 
   //Rectangle descriptif
@@ -90,41 +79,32 @@ d3.csv("../data/planets.csv").then((data) => {
   });
 
   //Pour créer les autres planètes en fonction de leur distance respective mais ça ne fonctionne pas
+  planets.forEach((planet) => {
+    const orbit = svg
+      .append("path")
+      .datum({
+        innerRadius: planet.distance - 10,
+        outerRadius: planet.distance + 10,
+      })
+      .attr(
+        "d",
+        d3
+          .arc()
+          .innerRadius((d) => d.innerRadius)
+          .outerRadius((d) => d.outerRadius)
+          .startAngle(0)
+          .endAngle(2 * Math.PI)
+      )
+      .attr("fill", "none")
+      .attr("stroke", "white")
+      .attr("stroke-width", 1);
 
-  //   planets.forEach((planet) => {
-  //     const orbit = svg
-  //       .append("path")
-  //       .datum({
-  //         innerRadius: planet.distance - 10,
-  //         outerRadius: planet.distance + 10,
-  //       })
-  //       .attr(
-  //         "d",
-  //         d3
-  //           .arc()
-  //           .innerRadius((d) => d.innerRadius)
-  //           .outerRadius((d) => d.outerRadius)
-  //           .startAngle(0)
-  //           .endAngle(2 * Math.PI)
-  //       )
-  //       .attr("fill", "none")
-  //       .attr("stroke", "white")
-  //       .attr("stroke-width", 1);
-
-  //     const circle = svg
-  //       .append("circle")
-  //       .datum(planet)
-  //       .attr("cx", width / 2)
-  //       .attr("cy", height / 2 - planet.distance)
-  //       .attr("r", planet.size / 2)
-  //       .attr("fill", planet.color).call;
-});
-
-d3.csv("../data/planets.csv").then((data) => {
-  const mercury = svg
-    .append("circle")
-    .attr("cx", width / 4)
-    .attr("cy", height / 4)
-    .attr("r", 50)
-    .attr("fill", "white");
+    const circle = svg
+      .append("circle")
+      .datum(planet)
+      .attr("cx", width / 2)
+      .attr("cy", height / 2 - planet.distance)
+      .attr("r", planet.size / 2)
+      .attr("fill", planet.color).call;
+  });
 });
