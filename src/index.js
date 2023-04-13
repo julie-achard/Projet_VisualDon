@@ -42,18 +42,14 @@ d3.csv("../data/planets.csv").then((data) => {
     .attr("cx", width / 2)
     .attr("cy", height / 2)
     .attr("r", 50)
-    .attr("fill", "yellow")
-    //Quand on clique sur le soleil un rectangle apparaît
-    .on("click", function (d) {
-      tooltip.style("visibility", "visible");
+    .attr("fill", "yellow");
 
-      const planets = data.map((planet) => ({
-        name: planet.Planet,
-        distance: +planet.Distance_from_sun * (10 ^ 6),
-        size: +planet.Diameter / 10000,
-        color: planet.Color,
-      }));
-    });
+  const planets = data.map((planet) => ({
+    name: planet.Planet,
+    distance: +planet.Distance_from_sun * (10 ^ 6),
+    size: +planet.Diameter / 10000,
+    color: planet.Color,
+  }));
 
   //Rectangle descriptif
   var description = d3
