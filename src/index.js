@@ -52,8 +52,8 @@ csv("../data/planets.csv").then(function (data) {
     .attr("width", width)
     .attr("height", height);
 
-  //Rectangle descriptif
-  var description = select("#SunDescription")
+  //Rectangle descriptif SOLEIL
+  var description = select("#SunDescription1")
     .append("div")
     .attr("id", "description")
     .style("background-color", "black")
@@ -61,8 +61,20 @@ csv("../data/planets.csv").then(function (data) {
     .style("padding", "10px")
     .style("display", "none")
     .style("position", "absolute")
-    .style("left", `${width / 2 - 100}px`) // position horizontale centrée par rapport au cercle du Soleil
-    .style("top", `${height / 2 + 70}px`); // position verticale en dessous du cercle du Soleil
+    .style("left", `${width / 6}px`) // position horizontale centrée par rapport au cercle du Soleil
+    .style("top", `${height / 2 + 20}px`); // position verticale en dessous du cercle du Soleil
+
+  //Fenêtre de droite descriptive qui prend la moitié de la page
+  var description2 = select("#SunDescription2")
+    .append("div")
+    .attr("id", "description")
+    .style("background-color", "black")
+    .style("border", "1px solid white")
+    .style("padding", "200px")
+    .style("display", "none")
+    .style("position", "absolute")
+    .style("left", `${width / 2 + 200}px`) // position horizontale centrée par rapport au cercle du Soleil
+    .style("top", `${height / 14}px`); // position verticale en dessous du cercle du Soleil
 
   console.log(planets);
 
@@ -96,37 +108,51 @@ csv("../data/planets.csv").then(function (data) {
       //Et quelques secondes après afficher la fiche
       setTimeout(function () {
         description.html(
-          "<h2>Description du Soleil</h2><p>Le Soleil est une étoile de type G2 qui se trouve au centre de notre système solaire.</p><p>C'est la source de chaleur et de lumière qui permet la vie sur Terre.</p>"
+          "<h2>Le Soleil</h2><p> Il est souvent considérée comme le cœur du thème astral. Il représente l'essence de notre être,</p><p>notre identité et notre volonté de vivre. Il est également considéré comme la source de notre énergie vitale,</p><p>de notre motivation et de notre rayonnement personnel.</p>"
         );
 
         //   // Mise à jour du contenu de la fiche descriptive avec les informations du Soleil
         description.html(
-          "<h2>Description du Soleil</h2><p>Le Soleil est une étoile de type G2 qui se trouve au centre de notre système solaire.</p><p>C'est la source de chaleur et de lumière qui permet la vie sur Terre.</p>"
+          "<h2>Le Soleil</h2><p> Il est souvent considérée comme le cœur du thème astral. Il représente l'essence de notre être,</p><p>notre identité et notre volonté de vivre. Il est également considéré comme la source de notre énergie vitale,</p><p>de notre motivation et de notre rayonnement personnel.</p>"
         );
         //   // Affichage de la fiche descriptive
         description.style("display", "block");
 
-        //   //Bouton pour fermer la fiche descriptive
+        //BOUTTON FERMER
         description
           .append("button")
           .attr("id", "close")
           .text("Fermer")
           .on("click", function () {
             description.style("display", "none");
+            soleil.transition().duration(1000).attr("r", 30);
           });
-        //Ajouter un bouton en savoir plus
+        // BOUTTON SAVOIR PLUS QUI AFFICHE DESCRIPTION 2
         description
           .append("button")
-          .attr("id", "more")
+          .attr("id", "close")
           .text("En savoir plus")
           .on("click", function () {
-            description.style("display", "none");
+            description2.html(
+              "<h4>Signification</h4><p>L'égo</p><h4>Symbole</h4><p>Vitalité et virilité</p><h4>Elément</h4><p>Associé au feu</p><h4>Couleur</h4><p>Or Jaune</p>"
+            );
+            //FERMER LA DESCRIPTION 2
+            description2.style("display", "block");
+            description2
+              .append("button")
+              .attr("id", "close")
+              .text("Fermer")
+              .on("click", function () {
+                description2.style("display", "none");
+                description.style("display", "none");
+                soleil.transition().duration(1000).attr("r", 30);
+              });
           });
       }, 1000);
     });
 
     // Creation planète
-    svg
+    const boule = svg
       .append("circle")
       .attr("id", planet.name)
       .attr("cx", scale(planet.distance))
@@ -134,8 +160,14 @@ csv("../data/planets.csv").then(function (data) {
       .attr("r", planet.size / 2) // planet.size for real size
       .attr("fill", planet.color)
       .attr("stroke", "white");
-
-    //Faire que les planètes flottent
+    //Faire bouger les planètes légèrement de haut en bas avec une boucle while
+    // boule
+    //   .transition()
+    //   .duration(1000)
+    //   .attr("cy", height / 2 + 10)
+    //   .transition()
+    //   .duration(1000)
+    //   .attr("cy", height / 2 - 10);
   });
 
   //Faire la fiche descriptive de Mercure
@@ -153,6 +185,7 @@ csv("../data/planets.csv").then(function (data) {
         description.style("display", "none");
       });
   });
+
   //Fiche descriptive de Vénus
   const venus = d3.select("#Venus");
   venus.on("click", function () {
