@@ -37,13 +37,13 @@ csv("../data/planets.csv").then(function (data) {
   console.log(distanceMax);
 
   const width = window.innerWidth;
-  const height = 500;
+  const height = 800;
 
   //L'échelle
   const scale = d3
     .scaleSqrt()
     .domain([0, distanceMax + 10000])
-    .range([100, width]);
+    .range([250, width]);
   //Définir le svg à l'échelle de la distance entre le soleil et Neptune
 
   const svg = d3
@@ -68,24 +68,27 @@ csv("../data/planets.csv").then(function (data) {
 
   //Pour créer les autres planètes en fonction de leur distance respective mais ça ne fonctionne pas
   planets.forEach((planet, index) => {
-    // Create orbits center on the sun
-    const orbit = svg
-      .append("circle")
-      .attr("cx", scale(planet.distance))
-      .attr("cy", height / 2)
-      .attr("r", planet.size / 2)
-      .attr("fill", "none")
-      .attr("stroke", "grey")
-      .attr("stroke-dasharray", "5,5");
+    // // Create orbits of the planets center on the sun
 
     //Create the sun
     const soleil = svg
       .append("circle")
       .attr("id", "Sun")
+      .attr("cx", 100)
+      .attr("cy", height / 2)
+      .attr("r", 30)
+      .attr("fill", "yellow");
+
+    //Faire que les orbites passe par le centre des planètes correspondantes
+    const orbit = svg
+      .append("circle")
+      .attr("id", "orbit")
       .attr("cx", 0)
       .attr("cy", height / 2)
-      .attr("r", 20)
-      .attr("fill", "yellow");
+      .attr("r", scale(planet.distance))
+      .attr("fill", "none")
+      .attr("stroke", "white")
+      .attr("stroke-solid", "5,5");
 
     //Rendre le soleil plus grand au clic
     soleil.on("click", function () {
@@ -131,6 +134,8 @@ csv("../data/planets.csv").then(function (data) {
       .attr("r", planet.size / 2) // planet.size for real size
       .attr("fill", planet.color)
       .attr("stroke", "white");
+
+    //Faire que les planètes flottent
   });
 
   //Faire la fiche descriptive de Mercure
