@@ -221,7 +221,6 @@ csv("../data/planets.csv").then(function (data) {
       descriptionMercure.html(
         "<h2>Le Soleil</h2><p> Il est souvent considérée comme le cœur du thème astral.Il représente l'essence de notre être,notre identité et notre volonté de vivre.</p>" +
           "<p>Il est également considéré comme la source</p>" +
-          "<br>" +
           "<p>de notre énergie vitale de notre motivation et de notre rayonnement personnel.</p>"
       );
       // Mise à jour du contenu de la fiche descriptive avec les informations de Mercure
@@ -242,7 +241,7 @@ csv("../data/planets.csv").then(function (data) {
         .text("Fermer")
         .on("click", function () {
           descriptionMercure.style("display", "none");
-          planet.Mercury.transition().duration(1000).attr("r", 10);
+          planetMercure.transition().duration(1000).attr("r", 10);
         });
       //Bouton en savoir plus Mercure
       descriptionMercure
@@ -261,6 +260,7 @@ csv("../data/planets.csv").then(function (data) {
               "<h4>Elément</h4><p>Associé au feu</p>" +
               "<h4>Couleur</h4><p>Or Jaune</p>"
           );
+
           //Bouton fermer fiche astrologique Mercure
           description2Mercure.style("display", "block");
           description2Mercure
@@ -280,5 +280,8 @@ csv("../data/planets.csv").then(function (data) {
     }, 1000);
     //Fin du premier Mercure on click
   });
+
+  //--FICHE DESCRIPTIVE VENUS --//
+  //--FICHE DESCRIPTIVE VENUS --//
   //Fin traitement données
 });
