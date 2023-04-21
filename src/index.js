@@ -242,7 +242,7 @@ csv("../data/planets.csv").then(function (data) {
         .text("Fermer")
         .on("click", function () {
           descriptionMercure.style("display", "none");
-          planet.Mercury.transition().duration(1000).attr("r", 10);
+          planetMercure.transition().duration(1000).attr("r", 10);
         });
       //Bouton en savoir plus Mercure
       descriptionMercure
@@ -261,6 +261,7 @@ csv("../data/planets.csv").then(function (data) {
               "<h4>Elément</h4><p>Associé au feu</p>" +
               "<h4>Couleur</h4><p>Or Jaune</p>"
           );
+
           //Bouton fermer fiche astrologique Mercure
           description2Mercure.style("display", "block");
           description2Mercure
@@ -280,5 +281,8 @@ csv("../data/planets.csv").then(function (data) {
     }, 1000);
     //Fin du premier Mercure on click
   });
+
+  //--FICHE DESCRIPTIVE VENUS --//
+  //--FICHE DESCRIPTIVE VENUS --//
   //Fin traitement données
 });
