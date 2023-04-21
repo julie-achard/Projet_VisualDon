@@ -43,7 +43,7 @@ csv("../data/planets.csv").then(function (data) {
   const scale = d3
     .scaleSqrt()
     .domain([0, distanceMax + 10000])
-    .range([250, width]);
+    .range([200, width]);
   //Définir le svg à l'échelle de la distance entre le soleil et Neptune
 
   const svg = d3
@@ -61,8 +61,8 @@ csv("../data/planets.csv").then(function (data) {
     .style("padding", "10px")
     .style("display", "none")
     .style("position", "absolute")
-    .style("left", `${width / 6}px`) // position horizontale centrée par rapport au cercle du Soleil
-    .style("top", `${height / 2 + 20}px`); // position verticale en dessous du cercle du Soleil
+    .style("left", `${width / 36}px`) // position horizontale centrée par rapport au cercle du Soleil
+    .style("top", `${height / 2 + 80}px`); // position verticale en dessous du cercle du Soleil
 
   //Fenêtre de droite descriptive qui prend la moitié de la page
   var description2 = select("#SunDescription2")
@@ -89,7 +89,7 @@ csv("../data/planets.csv").then(function (data) {
       .attr("cx", 100)
       .attr("cy", height / 2)
       .attr("r", 30)
-      .attr("fill", "yellow");
+      .attr("fill", "gold");
 
     //Faire que les orbites passe par le centre des planètes correspondantes
     const orbit = svg
@@ -108,7 +108,12 @@ csv("../data/planets.csv").then(function (data) {
       //Et quelques secondes après afficher la fiche
       setTimeout(function () {
         description.html(
-          "<h2>Le Soleil</h2><p> Il est souvent considérée comme le cœur du thème astral. Il représente l'essence de notre être,</p><p>notre identité et notre volonté de vivre. Il est également considéré comme la source de notre énergie vitale,</p><p>de notre motivation et de notre rayonnement personnel.</p>"
+          //Passer  à la ligne le texte
+
+          "<h2>Le Soleil</h2><p> Il est souvent considérée comme le cœur du thème astral.Il représente l'essence de notre être,notre identité et notre volonté de vivre.</p>" +
+            "<p>Il est également considéré comme la source</p>" +
+            "<br>" +
+            "<p>de notre énergie vitale de notre motivation et de notre rayonnement personnel.</p>"
         );
 
         //   // Mise à jour du contenu de la fiche descriptive avec les informations du Soleil
@@ -134,7 +139,10 @@ csv("../data/planets.csv").then(function (data) {
           .text("En savoir plus")
           .on("click", function () {
             description2.html(
-              "<h4>Signification</h4><p>L'égo</p><h4>Symbole</h4><p>Vitalité et virilité</p><h4>Elément</h4><p>Associé au feu</p><h4>Couleur</h4><p>Or Jaune</p>"
+              "<h4>Signification</h4><p>L'égo</p>" +
+                "<h4>Symbole</h4><p>Vitalité et virilité</p>" +
+                "<h4>Elément</h4><p>Associé au feu</p>" +
+                "<h4>Couleur</h4><p>Or Jaune</p>"
             );
             //FERMER LA DESCRIPTION 2
             description2.style("display", "block");
