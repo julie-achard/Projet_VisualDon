@@ -282,6 +282,8 @@ csv("../data/planets.csv").then(function (data) {
     //Fin du premier Mercure on click
   });
 
+  // Description jupiter
+
   //--FICHE DESCRIPTIVE VENUS --//
   //--FICHE DESCRIPTIVE VENUS --//
   //Fin traitement données
