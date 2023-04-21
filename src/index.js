@@ -219,13 +219,13 @@ csv("../data/planets.csv").then(function (data) {
     //Affichage de la fiche descriptive de Mercure
     setTimeout(function () {
       descriptionMercure.html(
-        "<h2>Le Soleil</h2><p> Il est souvent considérée comme le cœur du thème astral.Il représente l'essence de notre être,notre identité et notre volonté de vivre.</p>" +
+        "<h2>Mercure</h2><p> Mercure est associée en astrologie à la communication, à l’intelligence et à la curiosité. Elle représente la façon dont une personne communique et traite l'information, ainsi que la façon dont elle s'adapte à son environnement.</p>" +
           "<p>Il est également considéré comme la source</p>" +
           "<p>de notre énergie vitale de notre motivation et de notre rayonnement personnel.</p>"
       );
       // Mise à jour du contenu de la fiche descriptive avec les informations de Mercure
       descriptionMercure.html(
-        "<h2>Le Soleil</h2><p> Il est souvent considérée comme le cœur du thème astral. Il représente l'essence de notre être,</p><p>notre identité et notre volonté de vivre. Il est également considéré comme la source de notre énergie vitale,</p><p>de notre motivation et de notre rayonnement personnel.</p>"
+        "<h2>Mercure</h2><p> Mercure est associée en astrologie à la communication, à l’intelligence et à la curiosité. Elle représente la façon dont une personne communique et traite l'information, ainsi que la façon dont elle s'adapte à son environnement.</p>"
       );
       // Affichage de la fiche descriptive Mercure
       descriptionMercure.style("display", "block");
