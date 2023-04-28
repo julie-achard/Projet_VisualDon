@@ -189,7 +189,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionMercure = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style("background-image", "linear-gradient(to right, darkgray, dimgray )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -201,7 +201,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Mercure = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style("background-image", "linear-gradient(to right, darkgray, dimgray)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -234,10 +234,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Mercure
       descriptionMercure
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid dimgray")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "dimgray")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -247,10 +247,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Mercure
       descriptionMercure
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid dimgray")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "dimgray")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -267,10 +267,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Mercure
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid dimgray")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "sdimgray")
             .text("Fermer")
             .on("click", function () {
               description2Mercure.style("display", "none");
@@ -287,7 +287,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionVenus = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style("background-image", "linear-gradient(to right, orange, sienna )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -299,7 +299,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Venus = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style("background-image", "linear-gradient(to right, orange, sienna )")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -334,10 +334,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Venus
       descriptionVenus
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid sienna")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "sienna")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -347,10 +347,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Venus
       descriptionVenus
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid sienna")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "sienna")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -367,10 +367,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Venus
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid sienna")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "sienna")
             .text("Fermer")
             .on("click", function () {
               description2Venus.style("display", "none");
@@ -387,7 +387,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionTerre = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style("background-image", "linear-gradient(to right, seagreen, navy )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -399,7 +399,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Terre = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style("background-image", "linear-gradient(to right, seagreen, navy)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -431,10 +431,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Terre
       descriptionTerre
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid navy")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "navy")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -444,10 +444,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Terre
       descriptionTerre
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid navy")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "navy")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -464,10 +464,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Terre
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid navy")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "navy")
             .text("Fermer")
             .on("click", function () {
               description2Terre.style("display", "none");
@@ -484,7 +484,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionMars = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style("background-image", "linear-gradient(to right, salmon, tomato )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -496,7 +496,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Mars = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style("background-image", "linear-gradient(to right, salmon, tomato)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -530,10 +530,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Mars
       descriptionMars
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid tomato")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "tomato")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -543,10 +543,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Mars
       descriptionMars
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid tomato")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "tomato")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -563,10 +563,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Mars
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid tomato")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "tomato")
             .text("Fermer")
             .on("click", function () {
               description2Mars.style("display", "none");
@@ -583,7 +583,10 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionJupiter = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style(
+      "background-image",
+      "linear-gradient(to right, gainsboro, sandybrown )"
+    )
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -595,7 +598,10 @@ csv("../data/planets.csv").then(function (data) {
   var description2Jupiter = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style(
+      "background-image",
+      "linear-gradient(to right, gainsboro, sandybrown)"
+    )
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -627,10 +633,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Jupiter
       descriptionJupiter
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid gainsboro")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "gainsboro")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -640,10 +646,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Jupiter
       descriptionJupiter
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid gainsboro")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "gainsboro")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -660,10 +666,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Jupiter
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid gainsboro")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "gainsboro")
             .text("Fermer")
             .on("click", function () {
               description2Jupiter.style("display", "none");
@@ -680,7 +686,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionSaturne = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style("background-image", "linear-gradient(to right, moccasin, peru )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -692,7 +698,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Saturne = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style("background-image", "linear-gradient(to right, moccasin, peru)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -726,10 +732,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Saturne
       descriptionSaturne
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid peru")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "peru")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -739,10 +745,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Saturne
       descriptionSaturne
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid peru")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "peru")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -759,10 +765,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Saturne
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid peru")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "peru")
             .text("Fermer")
             .on("click", function () {
               description2Saturne.style("display", "none");
@@ -779,7 +785,10 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionUranus = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style(
+      "background-image",
+      "linear-gradient(to right, paleturquoise, lightskyblue )"
+    )
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -791,7 +800,10 @@ csv("../data/planets.csv").then(function (data) {
   var description2Uranus = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style(
+      "background-image",
+      "linear-gradient(to right, paleturquoise, lightskyblue)"
+    )
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -823,10 +835,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Uranus
       descriptionUranus
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid lightskyblue")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "lightskyblue")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -836,10 +848,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Uranus
       descriptionUranus
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid lightskyblue")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "lightskyblue")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -856,10 +868,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Uranus
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid lightskyblue")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "lightskyblue")
             .text("Fermer")
             .on("click", function () {
               description2Uranus.style("display", "none");
@@ -876,7 +888,10 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionNeptune = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, khaki, sandybrown )")
+    .style(
+      "background-image",
+      "linear-gradient(to right, slateblue, darkslateblue  )"
+    )
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -888,7 +903,10 @@ csv("../data/planets.csv").then(function (data) {
   var description2Neptune = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, sandybrown , khaki)")
+    .style(
+      "background-image",
+      "linear-gradient(to right, slateblue, darkslateblue)"
+    )
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -922,10 +940,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Neptune
       descriptionNeptune
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid darkslateblue")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "darkslateblue")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -935,10 +953,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Neptune
       descriptionNeptune
         .append("button")
-        .style("border", "1px solid sandybrown")
+        .style("border", "1px solid darkslateblue")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "sandybrown")
+        .style("color", "darkslateblue")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -955,10 +973,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Neptune
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid sandybrown")
+            .style("border", "1px solid darkslateblue")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "sandybrown")
+            .style("color", "darkslateblue")
             .text("Fermer")
             .on("click", function () {
               description2Neptune.style("display", "none");
