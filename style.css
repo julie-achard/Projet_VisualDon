@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
-h1{
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+h1 {
   font-size: 2em;
   font-weight: 700;
   text-align: center;
   margin-top: 10;
   margin-bottom: 0;
 }
-h6{
+h6 {
   font-size: 0.5em;
   font-weight: 500;
   text-align: center;
@@ -14,7 +14,7 @@ h6{
   margin-bottom: 0;
 }
 
-h4{
+h4 {
   font-size: 1.5em;
   font-weight: 500;
   color: black;
@@ -26,14 +26,29 @@ h4{
 body {
   background-image: url("./image/imageFond.jpg");
   background-size: cover;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   color: white;
 }
+
 #container {
   width: 1000px;
   height: 800px;
   display: flex;
 }
 
+.boule {
+  animation-name: float;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
-
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
