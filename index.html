@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <title>ProjetVisualDon</title>
+    <style>
+      body {
+        background: #000;
+      }
+    </style>
   </head>
   <body>
     <div id="navbar">
       <h1>Le système solaire<br /></h1>
     </div>
-    <div id="container"></div>
+
+    <div id="container">
+      <canvas id="canvas" style="position: absolute; top: 0; left: 0"></canvas>
+    </div>
     <!-- Container for the graph -->
     <!--container for the description-->
     <div id="Description1"></div>

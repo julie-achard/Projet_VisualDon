@@ -24,15 +24,16 @@ h4 {
 }
 
 body {
-  background-image: url("./image/imageFond.jpg");
+  /* background-image: url("./image/imageFond.jpg"); */
+  background: #000;
   background-size: cover;
   font-family: "Montserrat";
   color: white;
 }
 
 #container {
-  width: 1000px;
-  height: 800px;
+  width: auto;
+  height: auto;
   display: flex;
 }
 
@@ -42,6 +43,11 @@ body {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+#canvas {
+  position: absolute;
+  z-index: -1;
 }
 
 @keyframes float {
