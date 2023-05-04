@@ -78,7 +78,8 @@ csv("../data/planets.csv").then(function (data) {
       .attr("cy", height / 2)
       .attr("r", planet.size / 2) // planet.size for real size
       .attr("fill", planet.color)
-      .attr("stroke", "white");
+      .attr("stroke", "white")
+      .attr("class", "boule");
 
     //-- FICHES DESCRIPTIVES SOLEIL --//
 
@@ -987,6 +988,8 @@ csv("../data/planets.csv").then(function (data) {
     }, 1000);
     //Fin du premier Neptune on click
   });
+
+  // FOND INTERACTIF
 
   //Fin traitement données
 });
