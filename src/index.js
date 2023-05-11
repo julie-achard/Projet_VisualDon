@@ -42,7 +42,7 @@ csv("../data/planets.csv").then(function (data) {
   const scale = d3
     .scaleSqrt()
     .domain([0, distanceMax + 10000])
-    .range([200, width]);
+    .range([300, width]);
   //Création du svg
   const svg = d3
     .select("#container")
@@ -68,7 +68,7 @@ csv("../data/planets.csv").then(function (data) {
       .attr("cy", height / 2)
       .attr("r", scale(planet.distance))
       .attr("fill", "none")
-      .attr("stroke", "white")
+      .attr("stroke", "gray")
       .attr("stroke-solid", "5,5");
     // Creation planète
     const boule = svg
@@ -76,9 +76,9 @@ csv("../data/planets.csv").then(function (data) {
       .attr("id", planet.name)
       .attr("cx", scale(planet.distance))
       .attr("cy", height / 2)
-      .attr("r", planet.size / 2) // planet.size for real size
+      .attr("r", planet.size / 1.5) // planet.size for real size
       .attr("fill", planet.color)
-      .attr("stroke", "white")
+      .attr("stroke", "gray")
       .attr("class", "boule");
 
     //-- FICHES DESCRIPTIVES SOLEIL --//
@@ -190,7 +190,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionMercure = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, darkgray, dimgray )")
+    .style("background-image", "linear-gradient(to right, dimgray, dimgray )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -202,7 +202,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Mercure = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, darkgray, dimgray)")
+    .style("background-image", "linear-gradient(to right, dimgray, dimgray)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -288,7 +288,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionVenus = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, orange, sienna )")
+    .style("background-image", "linear-gradient(to right, sienna, sienna )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -300,7 +300,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Venus = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, orange, sienna )")
+    .style("background-image", "linear-gradient(to right, sienna, sienna )")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -388,7 +388,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionTerre = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, seagreen, navy )")
+    .style("background-image", "linear-gradient(to right, seagreen, seagreen )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -400,7 +400,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Terre = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, seagreen, navy)")
+    .style("background-image", "linear-gradient(to right, seagreen, seagreen)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -442,40 +442,6 @@ csv("../data/planets.csv").then(function (data) {
           descriptionTerre.style("display", "none");
           planetTerre.transition().duration(1000).attr("r", 10);
         });
-      //Bouton en savoir plus Terre
-      descriptionTerre
-        .append("button")
-        .style("border", "1px solid navy")
-        .style("border-radius", "15px")
-        .style("background-color", "white")
-        .style("color", "navy")
-        .attr("id", "close")
-        .text("En savoir plus")
-        .on("click", function () {
-          //Affichage de la fiche astrologique  Terre
-          description2Terre.html(
-            "<h4>Signification</h4><p></p>" +
-              "<h4>Symbole</h4><p></p>" +
-              "<h4>Elément</h4><p></p>" +
-              "<h4>Couleur</h4><p></p>"
-          );
-
-          //Bouton fermer fiche astrologique Terre
-          description2Terre.style("display", "block");
-          description2Terre
-            .append("button")
-            .attr("id", "close")
-            .style("border", "1px solid navy")
-            .style("border-radius", "15px")
-            .style("background-color", "white")
-            .style("color", "navy")
-            .text("Fermer")
-            .on("click", function () {
-              description2Terre.style("display", "none");
-              descriptionTerre.style("display", "none");
-              planetTerre.transition().duration(1000).attr("r", 10);
-            });
-        });
     }, 1000);
     //Fin du premier Terre on click
   });
@@ -485,7 +451,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionMars = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, salmon, tomato )")
+    .style("background-image", "linear-gradient(to right, tomato, tomato )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -497,7 +463,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Mars = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, salmon, tomato)")
+    .style("background-image", "linear-gradient(to right, tomato, tomato)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -586,7 +552,7 @@ csv("../data/planets.csv").then(function (data) {
     .attr("id", "description")
     .style(
       "background-image",
-      "linear-gradient(to right, gainsboro, sandybrown )"
+      "linear-gradient(to right, sandybrown , sandybrown )"
     )
     .style("border", "none")
     .style("padding", "10px")
@@ -601,7 +567,7 @@ csv("../data/planets.csv").then(function (data) {
     .attr("id", "description")
     .style(
       "background-image",
-      "linear-gradient(to right, gainsboro, sandybrown)"
+      "linear-gradient(to right, sandybrown , sandybrown )"
     )
     .style("border", "none")
     .style("padding", "200px")
@@ -634,10 +600,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton fermer Jupiter
       descriptionJupiter
         .append("button")
-        .style("border", "1px solid gainsboro")
+        .style("border", "1px solid sandybrown ")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "gainsboro")
+        .style("color", "sandybrown ")
         .attr("id", "close")
         .text("Fermer")
         .on("click", function () {
@@ -647,10 +613,10 @@ csv("../data/planets.csv").then(function (data) {
       //Bouton en savoir plus Jupiter
       descriptionJupiter
         .append("button")
-        .style("border", "1px solid gainsboro")
+        .style("border", "1px solid sandybrown ")
         .style("border-radius", "15px")
         .style("background-color", "white")
-        .style("color", "gainsboro")
+        .style("color", "sandybrown ")
         .attr("id", "close")
         .text("En savoir plus")
         .on("click", function () {
@@ -667,10 +633,10 @@ csv("../data/planets.csv").then(function (data) {
           description2Jupiter
             .append("button")
             .attr("id", "close")
-            .style("border", "1px solid gainsboro")
+            .style("border", "1px solid sandybrown ")
             .style("border-radius", "15px")
             .style("background-color", "white")
-            .style("color", "gainsboro")
+            .style("color", "sandybrown ")
             .text("Fermer")
             .on("click", function () {
               description2Jupiter.style("display", "none");
@@ -687,7 +653,7 @@ csv("../data/planets.csv").then(function (data) {
   var descriptionSaturne = select("#Description1")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, moccasin, peru )")
+    .style("background-image", "linear-gradient(to right, peru, peru )")
     .style("border", "none")
     .style("padding", "10px")
     .style("display", "none")
@@ -699,7 +665,7 @@ csv("../data/planets.csv").then(function (data) {
   var description2Saturne = select("#Description2")
     .append("div")
     .attr("id", "description")
-    .style("background-image", "linear-gradient(to right, moccasin, peru)")
+    .style("background-image", "linear-gradient(to right, peru, peru)")
     .style("border", "none")
     .style("padding", "200px")
     .style("display", "none")
@@ -788,7 +754,7 @@ csv("../data/planets.csv").then(function (data) {
     .attr("id", "description")
     .style(
       "background-image",
-      "linear-gradient(to right, paleturquoise, lightskyblue )"
+      "linear-gradient(to right, lightskyblue, lightskyblue )"
     )
     .style("border", "none")
     .style("padding", "10px")
@@ -803,7 +769,7 @@ csv("../data/planets.csv").then(function (data) {
     .attr("id", "description")
     .style(
       "background-image",
-      "linear-gradient(to right, paleturquoise, lightskyblue)"
+      "linear-gradient(to right, lightskyblue, lightskyblue)"
     )
     .style("border", "none")
     .style("padding", "200px")
@@ -891,7 +857,7 @@ csv("../data/planets.csv").then(function (data) {
     .attr("id", "description")
     .style(
       "background-image",
-      "linear-gradient(to right, slateblue, darkslateblue  )"
+      "linear-gradient(to right, slateblue, slateblue  )"
     )
     .style("border", "none")
     .style("padding", "10px")
@@ -906,7 +872,7 @@ csv("../data/planets.csv").then(function (data) {
     .attr("id", "description")
     .style(
       "background-image",
-      "linear-gradient(to right, slateblue, darkslateblue)"
+      "linear-gradient(to right, slateblue, slateblue)"
     )
     .style("border", "none")
     .style("padding", "200px")
@@ -992,13 +958,11 @@ csv("../data/planets.csv").then(function (data) {
   // FOND INTERACTIF
 
   /*
-   * Stars moving right to left
-   * Created for use on http://www.shariqraza.com
-   * Inspired from https://codepen.io/trhino/pen/JFmiK
-   * Updated to remove jQuery dependency and right to left animation
+   * étoiles en mouvement de droite à gauche
+   * Inspiré de https://codepen.io/trhino/pen/JFmiK
    */
   function Stars() {
-    //stars properties
+    //Propriétés des étoiles
     this.color = "rgba(255, 255, 255, 1)";
     this.minRadius = 0.5;
     this.maxRadius = 1.5;
@@ -1031,7 +995,7 @@ csv("../data/planets.csv").then(function (data) {
     window.addEventListener("resize", self.render);
   };
 
-  //Create shape
+  //Créer les formes
   Stars.prototype.createCircle = function () {
     var star = [];
 
@@ -1046,14 +1010,14 @@ csv("../data/planets.csv").then(function (data) {
         color: self.color,
       };
 
-      //once values are determined, draw star on canvas
+      //les valeurs sont détérminées, il faut dessiner les étoiles sur le canevas
       self.draw(star, i);
     }
-    //...and once drawn, animate the star
+    //...une fois dessinées, il faut animer les étoiles
     self.animate(star);
   };
 
-  // Draw the stars on canvas
+  // Dessine les étoiles sur le canevas
   Stars.prototype.draw = function (star, i) {
     var self = this,
       ctx = self.ctx;
@@ -1064,18 +1028,18 @@ csv("../data/planets.csv").then(function (data) {
     ctx.fill();
   };
 
-  // Animate stars from right to left
+  // étoiles animées qui partent de la droite jusq'à la gauche
   Stars.prototype.animate = function (star) {
     var self = this,
       ctx = self.ctx;
 
     setInterval(function () {
-      //clears canvas
+      //clear canvas
       self.clearCanvas();
-      //redraws stars
+      //redessines les étoiles
       for (var i = 0; i < self.numStars; i++) {
         star[i].xPos -= star[i].xVelocity;
-        //if star goes off screen from the left call reset method
+        //si l'étoile sort de l'écran à gauche reset la méthode
         if (star[i].xPos < 0) {
           self.resetStar(star, i);
         } else {
@@ -1085,7 +1049,7 @@ csv("../data/planets.csv").then(function (data) {
     }, 1000 / self.fps);
   };
 
-  // reset the star xPos with a randon YPos
+  // reset les étoiles xPos avec une position aléatoire YPos
   Stars.prototype.resetStar = function (star, i) {
     var self = this;
     star[i].xPos += canvas.width + star[i].radius;
